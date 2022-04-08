@@ -11,7 +11,6 @@ class MoviesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
 
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
 
         val movies = ArrayList<MovieModel>()
         val titles: Array<String> = resources.getStringArray(R.array.title)
@@ -36,6 +35,7 @@ class MoviesActivity : AppCompatActivity() {
             movies.add(movie)
         }
 
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
 
         val adapter: ApplicationAdapter = ApplicationAdapter(this, movies)
         recyclerView.adapter = adapter

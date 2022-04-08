@@ -27,7 +27,7 @@ class ApplicationAdapter(context: Context, feedEntries: ArrayList<MovieModel>): 
 
     override fun onBindViewHolder(holder: ApplicationAdapter.ViewHolder, position: Int) {
         val currentFeedEntry: MovieModel = localFeedEntries!![position]
-        holder.textile.text = currentFeedEntry.title
+        holder.textitle.text = currentFeedEntry.title
         holder.textrating.text = currentFeedEntry.imdbRating
         holder.textmeta.text = currentFeedEntry.metascore
         holder.textvotes.text = currentFeedEntry.imdbVotes
@@ -40,7 +40,7 @@ class ApplicationAdapter(context: Context, feedEntries: ArrayList<MovieModel>): 
 
     class ViewHolder(v: View): RecyclerView.ViewHolder(v) {
 
-        val textile: TextView = v.findViewById(R.id.textview_pelicula)
+        val textitle: TextView = v.findViewById(R.id.textview_pelicula)
         val textrating: TextView = v.findViewById(R.id.textview_rating)
         val textmeta: TextView = v.findViewById(R.id.textview_meta)
         val textvotes: TextView  = v.findViewById(R.id.textview_votes)
